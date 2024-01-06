@@ -71,10 +71,11 @@ h1, h2, h3, h4, h5, h6 {
    font-weight: 400;
 } /*Finish reset*/
 .header {
-   position: relative;
+   position: fixed;
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
+   z-index: 1;
    width: 100%;
    -ms-flex-wrap: wrap;
        flex-wrap: wrap;
@@ -123,6 +124,7 @@ h1, h2, h3, h4, h5, h6 {
    -webkit-box-align: center;
        -ms-flex-align: center;
            align-items: center;
+   background-color: rgb(255, 255, 255);
 }
 .header__burger {
    cursor: pointer;
@@ -201,11 +203,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .main {
    position: relative;
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
    width: 100%;
    height: auto;
+   min-height: 500px;
    -ms-flex-wrap: wrap;
        flex-wrap: wrap;
    font-size: 40px;
@@ -247,7 +247,7 @@ h1, h2, h3, h4, h5, h6 {
            flex-direction: column;
    -ms-flex-wrap: nowrap;
        flex-wrap: nowrap;
-   width: 80%;
+   width: 90%;
    -webkit-box-pack: center;
        -ms-flex-pack: center;
            justify-content: center;
@@ -264,7 +264,7 @@ h1, h2, h3, h4, h5, h6 {
    height: fit-content;
    -ms-flex-wrap: wrap;
        flex-wrap: wrap;
-   margin: 50px 0px 50px 0px;
+   margin: 10px 0px 50px 0px;
    -webkit-box-pack: center;
        -ms-flex-pack: center;
            justify-content: center;
@@ -273,10 +273,11 @@ h1, h2, h3, h4, h5, h6 {
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
-   padding-top: 50px;
+   width: 80%;
+   padding-top: 8px;
    -ms-flex-wrap: wrap;
        flex-wrap: wrap;
-   margin-bottom: 30px;
+   margin-bottom: 4px;
    -webkit-box-pack: center;
        -ms-flex-pack: center;
            justify-content: center;
@@ -358,7 +359,7 @@ h1, h2, h3, h4, h5, h6 {
            flex-direction: column;
    line-height: 30px;
    font-size: 18px;
-   margin-inline: 40px;
+   margin-inline: 60px;
    text-wrap: nowrap;
 }
 .local__contact {
@@ -383,7 +384,7 @@ h1, h2, h3, h4, h5, h6 {
            flex-direction: column;
    line-height: 30px;
    font-size: 18px;
-   margin-inline: 40px;
+   margin-inline: 60px;
 }
 
 .meal__1 {
@@ -593,7 +594,7 @@ h1, h2, h3, h4, h5, h6 {
    display: -ms-flexbox;
    display: flex;
    margin-top: 8px;
-   max-width: 250px;
+   max-width: 300px;
 }
 
 .explore__2:hover {
@@ -628,7 +629,7 @@ h1, h2, h3, h4, h5, h6 {
    -webkit-box-pack: center;
        -ms-flex-pack: center;
            justify-content: center;
-   padding: 32px;
+   margin: 32px 0px 32px 0px;
 }
 .social__app {
    display: -webkit-box;
@@ -646,6 +647,7 @@ h1, h2, h3, h4, h5, h6 {
    -webkit-box-pack: center;
        -ms-flex-pack: center;
            justify-content: center;
+   margin: 32px 70px 32px 70px;
 }
 .social__media {
    display: -webkit-box;
@@ -663,7 +665,7 @@ h1, h2, h3, h4, h5, h6 {
    -webkit-box-pack: center;
        -ms-flex-pack: center;
            justify-content: center;
-   padding: 32px;
+   margin: 32px 0px 32px 0px;
 }
 
 .subscription__1 {
@@ -687,10 +689,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .subscription__2-1 {
    opacity: 0.7;
+   width: 250px;
    padding: 10px;
    font-size: 18px;
 }
 .subscription__2-2 {
+   width: 110px;
    background-color: rgb(255, 227, 87);
    border-left: 1px solid #cacaca;
    color: #000000;
@@ -715,11 +719,23 @@ h1, h2, h3, h4, h5, h6 {
        flex-wrap: nowrap;
 }
 .app__2-1 {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
    width: 120px;
+   height: 40px;
+   background-image: url("../../img/footer/app-store-badge.svg");
+   background-size: contain;
    margin-right: 16px;
 }
 .app__2-2 {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   background-image: url("../../img/footer/google-play-badge.png");
+   background-size: contain;
    width: 136px;
+   height: 40px;
 }
 
 .media__1 {
@@ -739,24 +755,69 @@ h1, h2, h3, h4, h5, h6 {
        flex-wrap: nowrap;
 }
 .media__2-1 {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   background-image: url("../../img/footer/icon_fb1.png");
+   background-size: contain;
    width: 42px;
+   height: 42px;
    margin-inline: 8px;
+}
+.media__2-1:hover {
+   background-image: url("../../img/footer/icon_fb2.png");
 }
 .media__2-2 {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   background-image: url("../../img/footer/icon_inst1.png");
+   background-size: contain;
    width: 42px;
+   height: 42px;
    margin-inline: 8px;
+}
+.media__2-2:hover {
+   background-image: url("../../img/footer/icon_inst2.png");
 }
 .media__2-3 {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   background-image: url("../../img/footer/icon_pint1.png");
+   background-size: contain;
    width: 42px;
+   height: 42px;
    margin-inline: 8px;
+}
+.media__2-3:hover {
+   background-image: url("../../img/footer/icon_pint2.png");
 }
 .media__2-4 {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   background-image: url("../../img/footer/icon_twitter1.png");
+   background-size: contain;
    width: 42px;
+   height: 42px;
    margin-inline: 8px;
 }
+.media__2-4:hover {
+   background-image: url("../../img/footer/icon_twitter2.png");
+}
 .media__2-5 {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   background-image: url("../../img/footer/icon_tiktok1.png");
+   background-size: contain;
    width: 42px;
+   height: 42px;
    margin-inline: 8px;
+}
+.media__2-5:hover {
+   background-image: url("../../img/footer/icon_tiktok2.png");
 }
 
 .copyright__line1 {
@@ -782,8 +843,8 @@ h1, h2, h3, h4, h5, h6 {
    position: absolute;
    width: 13px;
    height: 7px;
-   -webkit-transform: translateY(198%) translateX(-90%);
-           transform: translateY(198%) translateX(-90%);
+   -webkit-transform: translateY(198%) translateX(-25%);
+           transform: translateY(198%) translateX(-25%);
 }
 .copyright__1-2-note {
    display: none;
@@ -807,8 +868,8 @@ h1, h2, h3, h4, h5, h6 {
    font-size: 16px;
    color: #555555;
    line-height: 18px;
-   -webkit-transform: translateY(-107.1%) translateX(-30%);
-           transform: translateY(-107.1%) translateX(-30%);
+   -webkit-transform: translateY(-107.1%) translateX(-35%);
+           transform: translateY(-107.1%) translateX(-35%);
 }
 .copyright__2-2 {
    font-size: 12px;
